@@ -420,19 +420,85 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
   text-transform: uppercase;
 }
 .dress-content strong { color: #fff2b8; }
+.gift-card {
+  position: relative;
+  z-index: 2;
+  width: min(92vw, 445px);
+  aspect-ratio: 1086 / 1448;
+  margin-top: 18px;
+  filter: drop-shadow(0 14px 13px rgba(66, 37, 5, .28));
+}
+.gift-frame {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+.gift-content {
+  position: absolute;
+  z-index: 2;
+  top: 17%;
+  left: 15%;
+  right: 15%;
+  bottom: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #4a2a18;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 250, 226, .85);
+}
+.gift-content h2 { margin: 0 0 15px; color: #7e1f25; font: 52px Italianno, cursive; line-height: .9; }
+.gift-content p { max-width: 300px; margin: 6px 0; font: 600 clamp(10px, 3vw, 14px) Cinzel, serif; line-height: 1.55; }
+.gift-content .gratitude { margin-top: 14px; color: #9a7027; font-family: Italianno, cursive; font-size: 25px; text-transform: none; }
 .button { z-index: 2; display: inline-block; margin-top: 18px; padding: 15px 28px; color: white; background: var(--gold); border-radius: 999px; box-shadow: 0 7px 0 #795a21; transition: transform .2s, box-shadow .2s; }
 .button:hover { transform: translateY(2px); box-shadow: 0 5px 0 #795a21; }
-.gifts { min-height: 680px; }
-.rose-cluster { font-size: 38px; filter: drop-shadow(0 4px 4px rgba(60,10,10,.2)); }
-.gifts h2 { color: var(--wine); }
-.gifts p { max-width: 370px; font-family: Cinzel, serif; line-height: 1.7; }
-.gift-icons { margin-top: 24px; font-size: 54px; }
-.rsvp { min-height: 620px; color: white; background: radial-gradient(circle at top, #a1373d, #66171c 65%, #3c0e11); }
-.rsvp::after { border-color: rgba(235,202,116,.7); }
-.rsvp h2 { color: #f1d58f; }
-.rsvp p { z-index: 2; }
-.button-light { color: var(--wine-dark); background: #f6e4af; box-shadow: 0 7px 0 #b38d3c; }
-.closing { margin-top: 52px; font: 48px Italianno, cursive; color: #f0d68f; }
+.rsvp {
+  min-height: 680px;
+  margin-top: 30px;
+  padding: 105px 34px 70px;
+  color: white;
+  background:
+    radial-gradient(circle at 50% 8%, rgba(217, 168, 76, .28), transparent 34%),
+    linear-gradient(rgba(83, 14, 20, .92), rgba(48, 7, 11, .96)),
+    url("assets/fondo-damasco.png");
+  background-size: auto, auto, cover;
+  box-shadow: 0 -10px 22px rgba(64, 37, 8, .2), 0 14px 22px rgba(54, 25, 4, .28);
+}
+.rsvp::after {
+  inset: 14px;
+  border: 2px solid rgba(235,202,116,.76);
+  box-shadow: inset 0 0 0 4px rgba(255, 239, 190, .1), inset 0 0 30px rgba(20, 0, 0, .28);
+}
+.rsvp-corner { position: absolute; z-index: 1; top: -2px; width: min(44%, 220px); height: auto; opacity: .9; pointer-events: none; }
+.rsvp-corner-right { right: -2px; }
+.rsvp-corner-left { left: -2px; transform: scaleX(-1); }
+.rsvp-seal { position: relative; z-index: 2; width: 98px; height: 98px; object-fit: contain; filter: drop-shadow(0 7px 8px rgba(22, 0, 0, .4)); }
+.rsvp-kicker { z-index: 2; margin: 15px 0 7px; color: #daba64; font: 600 13px Cinzel, serif; letter-spacing: .24em; text-transform: uppercase; }
+.rsvp h2 { z-index: 2; max-width: 400px; margin: 8px 0 13px; color: #f3d787; font-size: clamp(56px, 15vw, 75px); text-shadow: 0 3px 10px rgba(20,0,0,.48); }
+.rsvp p { z-index: 2; max-width: 350px; line-height: 1.7; }
+.rsvp-divider { z-index: 2; display: flex; align-items: center; width: min(78%, 320px); gap: 12px; color: #d6ae50; }
+.rsvp-divider::before, .rsvp-divider::after { content: ""; height: 1px; flex: 1; background: linear-gradient(to right, transparent, #d6ae50); }
+.rsvp-divider::after { transform: scaleX(-1); }
+.rsvp-divider span { font-size: 9px; }
+.button-light { padding: 16px 27px; color: var(--wine-dark); background: linear-gradient(#fff4ca, #d7b65e); border: 1px solid #f8e4a7; box-shadow: 0 6px 0 #8e6822, 0 11px 19px rgba(17,0,0,.35); }
+.closing { margin-top: 46px; font: 52px Italianno, cursive; color: #f0d68f; }
+.site-footer {
+  width: min(100%, 520px);
+  margin: 24px auto 0;
+  padding: 27px 20px 31px;
+  color: #f0db9e;
+  background: #301013;
+  border-top: 1px solid #bd9340;
+  text-align: center;
+  box-shadow: 0 -8px 20px rgba(53, 29, 4, .2);
+}
+.site-footer p { margin: 0 0 5px; font: 600 14px Cinzel, serif; letter-spacing: .12em; }
+.site-footer span { font-size: 10px; letter-spacing: .1em; text-transform: uppercase; opacity: .75; }
 
 @media (max-width: 370px) {
   .section { padding-inline: 20px; }
