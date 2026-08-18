@@ -32,7 +32,7 @@ main {
   margin-inline: auto;
   box-shadow: 0 0 45px rgba(57,35,10,.35);
   overflow: hidden;
-  background: rgba(255, 250, 234, .36);
+  background: rgba(255, 250, 234, .82);
 }
 .section {
   position: relative;
@@ -43,7 +43,7 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: rgba(255, 252, 241, .78);
+  background: rgba(255, 252, 241, .91);
 }
 .section::after {
   content: "";
@@ -56,7 +56,7 @@ main {
   min-height: 100svh;
   padding: 26px 14px 66px;
   justify-content: flex-start;
-  background: rgba(255, 250, 234, .54);
+  background: rgba(255, 250, 234, .89);
 }
 .hero::after { display: none; }
 .corner-ornament {
@@ -95,7 +95,6 @@ main {
   height: 100%;
   object-fit: cover;
   object-position: center 8%;
-  mix-blend-mode: multiply;
   transform: scale(1.06);
 }
 .rose-frame {
@@ -174,7 +173,7 @@ main {
 .countdown { display: grid; grid-template-columns: repeat(4, 1fr); width: min(100%, 420px); margin-top: -7px; padding: 19px 12px; color: white; background: linear-gradient(135deg, #c7a550, #8e6724); border: 3px double #f4df9d; border-radius: 18px; z-index: 2; }
 .countdown strong { display: block; font-family: Cinzel, serif; font-size: clamp(22px, 7vw, 34px); font-weight: 400; }
 .countdown small { text-transform: uppercase; font-size: 8px; letter-spacing: .08em; }
-.audio-section { min-height: 470px; background: rgba(250,245,228,.8); }
+.audio-section { min-height: 470px; background: rgba(250,245,228,.91); }
 .seal, .medallion { display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, #f7dda1, #9a6d28); border: 3px double #72501e; box-shadow: 0 4px 15px rgba(70,40,8,.25); }
 .seal { width: 80px; height: 80px; font-size: 34px; }
 h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold); line-height: .9; }
