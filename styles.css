@@ -32,7 +32,7 @@ main {
   margin-inline: auto;
   box-shadow: 0 0 45px rgba(57,35,10,.35);
   overflow: hidden;
-  background: rgba(255, 250, 234, .82);
+  background: rgba(255, 250, 234, .68);
 }
 .section {
   position: relative;
@@ -43,7 +43,7 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: rgba(255, 252, 241, .91);
+  background: rgba(255, 252, 241, .84);
 }
 .section::after {
   content: "";
@@ -56,7 +56,7 @@ main {
   min-height: 100svh;
   padding: 26px 14px 66px;
   justify-content: flex-start;
-  background: rgba(255, 250, 234, .89);
+  background: rgba(255, 250, 234, .82);
 }
 .hero::after { display: none; }
 .corner-ornament {

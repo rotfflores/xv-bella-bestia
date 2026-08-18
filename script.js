@@ -27,6 +27,7 @@ setInterval(updateCountdown, 1000);
 const music = document.querySelector('#music');
 const musicButton = document.querySelector('#musicButton');
 const musicLabel = document.querySelector('#musicLabel');
+music.volume = 0.48;
 
 musicButton.addEventListener('click', async () => {
   if (music.paused) {
