@@ -22,12 +22,22 @@
       <img class="corner-ornament corner-right" src="assets/esquina-dorada.png" alt="" aria-hidden="true">
       <div class="invitation-frame">
         <div class="model-window">
-          <img src="assets/modelo-paisaje.png" alt="Quinceañera con vestido dorado en un jardín de rosas">
+          <img src="assets/modelo-realista.png" alt="Fotografía de una quinceañera con vestido dorado en un jardín de rosas">
         </div>
         <img class="rose-frame" src="assets/marco-rosas.png" alt="Marco dorado ornamentado con rosas rojas y el texto Mis quince años">
         <div class="frame-name">Aitana</div>
       </div>
       <p class="intro">Hay momentos en la vida que son especiales por sí solos, pero compartirlos con las personas que quiero los hace inolvidables.</p>
+      <div class="ornate-player">
+        <img class="player-frame" src="assets/reproductor-marco.png" alt="" aria-hidden="true">
+        <button class="player-button" id="musicButton" type="button" aria-pressed="false" aria-label="Reproducir música">
+          <img src="assets/reproductor-boton.png" alt="">
+        </button>
+        <audio id="music" preload="metadata" loop>
+          <source src="assets/musica.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <p class="player-caption" id="musicLabel">Presiona para reproducir</p>
       <a class="scroll-cue" href="#historia" aria-label="Continuar a la invitación"><span></span></a>
     </section>
 
@@ -40,19 +50,6 @@
         <div><strong id="minutes">00</strong><small>Minutos</small></div>
         <div><strong id="seconds">00</strong><small>Segundos</small></div>
       </div>
-    </section>
-
-    <section class="section audio-section">
-      <div class="seal">🌹</div>
-      <h2>Una noche encantada</h2>
-      <p>Presiona para acompañar la invitación con música.</p>
-      <button class="music-button" id="musicButton" type="button" aria-pressed="false">
-        <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
-        <span id="musicLabel">Reproducir música</span>
-      </button>
-      <audio id="music" preload="none" loop>
-        <source src="assets/musica.mp3" type="audio/mpeg">
-      </audio>
     </section>
 
     <section class="section reception" id="recepcion">

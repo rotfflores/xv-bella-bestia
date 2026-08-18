@@ -34,14 +34,16 @@ musicButton.addEventListener('click', async () => {
       await music.play();
       musicButton.classList.add('playing');
       musicButton.setAttribute('aria-pressed', 'true');
-      musicLabel.textContent = 'Pausar música';
+      musicButton.setAttribute('aria-label', 'Pausar música');
+      musicLabel.textContent = 'Reproduciendo · presiona para pausar';
     } catch {
-      musicLabel.textContent = 'Agrega musica.mp3';
+      musicLabel.textContent = 'No se pudo reproducir';
     }
   } else {
     music.pause();
     musicButton.classList.remove('playing');
     musicButton.setAttribute('aria-pressed', 'false');
-    musicLabel.textContent = 'Reproducir música';
+    musicButton.setAttribute('aria-label', 'Reproducir música');
+    musicLabel.textContent = 'Presiona para reproducir';
   }
 });
