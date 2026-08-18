@@ -67,8 +67,15 @@ main {
     url("assets/fondo-damasco.png");
   background-size: auto, cover;
   background-position: center top;
+  margin-bottom: 30px;
+  box-shadow: 0 13px 22px rgba(64, 37, 8, .28);
 }
-.hero::after { display: none; }
+.hero::after {
+  display: block;
+  inset: 14px;
+  border: 2px solid rgba(176, 139, 49, .58);
+  box-shadow: inset 0 0 0 4px rgba(255, 247, 218, .32);
+}
 .corner-ornament {
   position: absolute;
   z-index: 1;
@@ -291,12 +298,71 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
 .music-button.playing i { animation: sound .7s infinite alternate; }
 .music-button.playing i:nth-child(2), .music-button.playing i:nth-child(4) { animation-delay: -.35s; }
 @keyframes sound { to { height: 20px; } }
-.reception { min-height: 720px; }
-.reception h2 { margin-top: 40px; }
-.castle { font-size: 110px; color: var(--gold); line-height: 1; text-shadow: 4px 4px 0 #f0ddb0; }
-.time { font: 700 26px Cinzel, serif; margin: 8px; }
-.reception h3 { max-width: 320px; margin: 10px 0; font: 700 29px Cinzel, serif; text-transform: uppercase; }
-.address { max-width: 340px; line-height: 1.7; }
+.reception {
+  min-height: 660px;
+  padding: 26px 10px 38px;
+  box-shadow: 0 -9px 20px rgba(64, 37, 8, .16), 0 13px 22px rgba(64, 37, 8, .25);
+}
+.venue-card {
+  position: relative;
+  z-index: 2;
+  width: min(96vw, 490px);
+  aspect-ratio: 1199 / 1312;
+  filter: drop-shadow(0 13px 13px rgba(67, 39, 7, .25));
+}
+.venue-frame {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+.venue-content {
+  position: absolute;
+  z-index: 3;
+  top: 25%;
+  left: 9%;
+  right: 9%;
+  bottom: 13%;
+  display: grid;
+  grid-template-columns: 47% 53%;
+  align-items: center;
+}
+.venue-castle {
+  width: 116%;
+  max-height: 72%;
+  margin-left: -10%;
+  object-fit: contain;
+  filter: drop-shadow(0 7px 5px rgba(93, 54, 8, .2));
+}
+.venue-details { padding: 0 5px; }
+.venue-details > p { margin: 0 0 8px; color: #a27b27; font: 34px Italianno, cursive; }
+.venue-details h2 {
+  margin: 0;
+  color: #4c2a15;
+  font: 600 clamp(22px, 6.5vw, 34px) Cinzel, serif;
+  line-height: 1.28;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 #fff5d3;
+}
+.venue-button {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 22px;
+  color: white;
+  background: linear-gradient(#c79c3f, #9b7123);
+  border: 1px solid #785217;
+  border-radius: 999px;
+  box-shadow: 0 5px 0 #684313, 0 8px 13px rgba(77, 42, 4, .2);
+  font: 600 11px Montserrat, sans-serif;
+  letter-spacing: .1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: transform .2s, box-shadow .2s;
+}
+.venue-button:hover { transform: translateY(2px); box-shadow: 0 3px 0 #684313, 0 5px 9px rgba(77, 42, 4, .2); }
 .button { z-index: 2; display: inline-block; margin-top: 18px; padding: 15px 28px; color: white; background: var(--gold); border-radius: 999px; box-shadow: 0 7px 0 #795a21; transition: transform .2s, box-shadow .2s; }
 .button:hover { transform: translateY(2px); box-shadow: 0 5px 0 #795a21; }
 .dress-code { min-height: 760px; color: white; background: linear-gradient(rgba(131,102,36,.8), rgba(112,81,27,.9)), url("assets/fondo-damasco.png"); background-size: auto, cover; }
