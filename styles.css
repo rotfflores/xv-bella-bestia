@@ -28,7 +28,7 @@ body::before {
 }
 main {
   position: relative;
-  width: min(100%, 520px);
+  width: min(100%, 420px);
   margin-inline: auto;
   box-shadow: 0 0 45px rgba(57,35,10,.35);
   overflow: hidden;
@@ -92,7 +92,7 @@ main {
 .invitation-frame {
   position: relative;
   z-index: 2;
-  width: min(94vw, 470px);
+  width: min(100%, 470px);
   aspect-ratio: 937 / 1679;
   filter: drop-shadow(0 15px 16px rgba(75, 44, 8, .3));
 }
@@ -200,7 +200,7 @@ main {
 .ornate-player {
   position: relative;
   z-index: 2;
-  width: min(96vw, 470px);
+  width: min(100%, 470px);
   aspect-ratio: 3 / 2;
   margin-top: 14px;
 }
@@ -240,7 +240,7 @@ main {
 .countdown-art {
   position: relative;
   z-index: 2;
-  width: min(94vw, 470px);
+  width: min(100%, 470px);
   aspect-ratio: 2 / 3;
   margin-top: 38px;
   filter: drop-shadow(0 14px 15px rgba(65, 37, 7, .28));
@@ -311,7 +311,7 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
 .venue-card {
   position: relative;
   z-index: 2;
-  width: min(96vw, 490px);
+  width: min(100%, 490px);
   aspect-ratio: 1199 / 1312;
   filter: drop-shadow(0 13px 13px rgba(67, 39, 7, .25));
 }
@@ -371,7 +371,7 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
 .dress-card {
   position: relative;
   z-index: 1;
-  width: min(91vw, 440px);
+  width: min(96%, 440px);
   aspect-ratio: 2 / 3;
   margin-top: -54px;
   filter: drop-shadow(0 14px 13px rgba(66, 37, 5, .3));
@@ -423,7 +423,7 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
 .gift-card {
   position: relative;
   z-index: 2;
-  width: min(92vw, 445px);
+  width: min(96%, 445px);
   aspect-ratio: 1086 / 1448;
   margin-top: 18px;
   filter: drop-shadow(0 14px 13px rgba(66, 37, 5, .28));
@@ -488,7 +488,7 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
 .button-light { padding: 16px 27px; color: var(--wine-dark); background: linear-gradient(#fff4ca, #d7b65e); border: 1px solid #f8e4a7; box-shadow: 0 6px 0 #8e6822, 0 11px 19px rgba(17,0,0,.35); }
 .closing { margin-top: 46px; font: 52px Italianno, cursive; color: #f0d68f; }
 .site-footer {
-  width: min(100%, 520px);
+  width: min(100%, 420px);
   margin: 24px auto 0;
   padding: 27px 20px 31px;
   color: #f0db9e;
