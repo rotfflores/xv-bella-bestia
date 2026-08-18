@@ -56,8 +56,29 @@ main {
   border: 1px solid rgba(176,139,49,.52);
   pointer-events: none;
 }
-.hero { min-height: 100svh; padding-top: 92px; justify-content: flex-start; }
-.top-ornament { position: absolute; top: 25px; color: var(--gold); font-size: 46px; }
+.hero {
+  min-height: 100svh;
+  padding-top: 92px;
+  justify-content: flex-start;
+  background-color: #ead09a;
+  background-image: url("assets/fondo-damasco.png");
+  background-size: cover;
+  background-position: center top;
+}
+.hero::after { display: none; }
+.corner-ornament {
+  position: absolute;
+  z-index: 1;
+  top: -4px;
+  width: min(58%, 290px);
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 4px 5px rgba(83, 52, 10, .18));
+}
+.corner-right { right: -4px; }
+.corner-left { left: -4px; transform: scaleX(-1); }
+.hero > :not(.corner-ornament) { position: relative; z-index: 2; }
 .eyebrow { font-family: Cinzel, serif; letter-spacing: .11em; font-weight: 700; }
 .ribbon {
   position: relative;
