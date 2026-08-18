@@ -72,7 +72,7 @@ main {
   background-size: auto, cover;
   background-position: center top;
   margin-bottom: 0;
-  box-shadow: 0 13px 22px rgba(64, 37, 8, .28);
+  box-shadow: none;
 }
 .hero::after {
   display: block;
@@ -305,7 +305,7 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
 .reception {
   min-height: 0;
   padding: 26px 10px 0;
-  box-shadow: 0 -9px 20px rgba(64, 37, 8, .16), 0 13px 22px rgba(64, 37, 8, .25);
+  box-shadow: none;
 }
 .reception::after {
   inset: 14px;
@@ -471,7 +471,7 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
     linear-gradient(rgba(83, 14, 20, .92), rgba(48, 7, 11, .96)),
     url("assets/fondo-damasco.png");
   background-size: auto, auto, cover;
-  box-shadow: 0 -10px 22px rgba(64, 37, 8, .2), 0 14px 22px rgba(54, 25, 4, .28);
+  box-shadow: none;
 }
 .rsvp::after {
   inset: 14px;
