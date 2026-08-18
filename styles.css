@@ -32,7 +32,7 @@ main {
   margin-inline: auto;
   box-shadow: 0 0 45px rgba(57,35,10,.35);
   overflow: hidden;
-  background: rgba(255, 250, 234, .68);
+  background: rgba(255, 250, 234, .2);
 }
 .section {
   position: relative;
@@ -43,7 +43,12 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: rgba(255, 252, 241, .84);
+  background-color: rgba(255, 252, 241, .76);
+  background-image:
+    linear-gradient(rgba(255, 252, 241, .72), rgba(255, 252, 241, .72)),
+    url("assets/fondo-damasco.png");
+  background-size: auto, cover;
+  background-position: center;
 }
 .section::after {
   content: "";
@@ -56,7 +61,12 @@ main {
   min-height: 100svh;
   padding: 26px 14px 66px;
   justify-content: flex-start;
-  background: rgba(255, 250, 234, .82);
+  background-color: rgba(255, 250, 234, .7);
+  background-image:
+    linear-gradient(rgba(255, 250, 234, .68), rgba(255, 250, 234, .68)),
+    url("assets/fondo-damasco.png");
+  background-size: auto, cover;
+  background-position: center top;
 }
 .hero::after { display: none; }
 .corner-ornament {
@@ -162,7 +172,24 @@ main {
   box-shadow: 0 8px 16px rgba(66,39,8,.32);
 }
 .name-plaque span { font-family: Italianno, cursive; font-size: clamp(64px, 19vw, 92px); line-height: .85; }
-.intro { max-width: 390px; margin: 28px 14px 0; padding: 22px 24px; font-family: Cinzel, serif; font-size: 14px; line-height: 1.8; background: rgba(255, 250, 235, .58); border: 1px solid rgba(176,139,49,.38); box-shadow: inset 0 0 20px rgba(113, 72, 21, .28), inset 0 0 4px rgba(76, 44, 11, .22); }
+.intro {
+  max-width: 390px;
+  margin: 28px 14px 0;
+  padding: 24px 26px;
+  font-family: Cinzel, serif;
+  font-size: 14px;
+  line-height: 1.8;
+  background: linear-gradient(145deg, rgba(255,253,243,.8), rgba(238,219,174,.62));
+  border: 1px solid rgba(132, 91, 30, .54);
+  border-radius: 4px;
+  box-shadow:
+    inset 0 3px 7px rgba(75, 43, 9, .34),
+    inset 0 -2px 5px rgba(255, 255, 255, .84),
+    inset 8px 0 14px rgba(104, 65, 16, .18),
+    inset -8px 0 14px rgba(104, 65, 16, .18),
+    inset 0 0 34px rgba(126, 82, 21, .2),
+    0 1px 0 rgba(255,255,255,.62);
+}
 .ornate-player {
   position: relative;
   z-index: 2;
