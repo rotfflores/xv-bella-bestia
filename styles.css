@@ -13,21 +13,18 @@ body {
   margin: 0;
   color: var(--ink);
   font-family: Montserrat, sans-serif;
-  background-color: #d8bd78;
-  background-image:
-    radial-gradient(circle at 12% 8%, rgba(255,255,255,.36), transparent 28%),
-    repeating-linear-gradient(45deg, rgba(120,82,28,.04) 0 2px, transparent 2px 12px);
+  background-color: #ead09a;
+  background-image: url("assets/fondo-damasco.png");
+  background-size: min(941px, 100vw) auto;
+  background-position: center top;
+  background-attachment: fixed;
 }
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  opacity: .13;
-  background-image: url("assets/referencia.jpeg");
-  background-size: 768px auto;
-  background-position: center top;
-  filter: sepia(1);
+  background: linear-gradient(rgba(255, 248, 225, .12), rgba(132, 88, 22, .06));
 }
 main {
   position: relative;
@@ -35,6 +32,7 @@ main {
   margin-inline: auto;
   box-shadow: 0 0 45px rgba(57,35,10,.35);
   overflow: hidden;
+  background: rgba(255, 250, 234, .36);
 }
 .section {
   position: relative;
@@ -45,9 +43,7 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-color: var(--cream);
-  background-image: linear-gradient(rgba(255,252,241,.93), rgba(255,252,241,.93)), url("assets/referencia.jpeg");
-  background-size: auto, 768px auto;
+  background: rgba(255, 252, 241, .78);
 }
 .section::after {
   content: "";
@@ -58,12 +54,9 @@ main {
 }
 .hero {
   min-height: 100svh;
-  padding-top: 92px;
+  padding: 26px 14px 66px;
   justify-content: flex-start;
-  background-color: #ead09a;
-  background-image: url("assets/fondo-damasco.png");
-  background-size: cover;
-  background-position: center top;
+  background: rgba(255, 250, 234, .54);
 }
 .hero::after { display: none; }
 .corner-ornament {
@@ -79,6 +72,57 @@ main {
 .corner-right { right: -4px; }
 .corner-left { left: -4px; transform: scaleX(-1); }
 .hero > :not(.corner-ornament) { position: relative; z-index: 2; }
+.invitation-frame {
+  position: relative;
+  z-index: 2;
+  width: min(94vw, 470px);
+  aspect-ratio: 937 / 1679;
+  filter: drop-shadow(0 15px 16px rgba(75, 44, 8, .3));
+}
+.model-window {
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  top: 24.5%;
+  left: 13.5%;
+  width: 73%;
+  height: 55%;
+  background: rgba(255, 250, 235, .54);
+  border-radius: 44% 44% 4% 4% / 12% 12% 4% 4%;
+}
+.model-window img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 8%;
+  mix-blend-mode: multiply;
+  transform: scale(1.06);
+}
+.rose-frame {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}
+.frame-name {
+  position: absolute !important;
+  z-index: 3 !important;
+  left: 9%;
+  right: 9%;
+  bottom: 4.8%;
+  color: #3c2414;
+  font-family: Italianno, cursive;
+  font-size: clamp(64px, 18vw, 91px);
+  line-height: 1;
+  letter-spacing: .015em;
+  text-shadow:
+    0 1px 0 #fff5d9,
+    0 3px 1px rgba(92, 55, 18, .28),
+    0 7px 12px rgba(74, 38, 5, .2);
+}
 .eyebrow { font-family: Cinzel, serif; letter-spacing: .11em; font-weight: 700; }
 .ribbon {
   position: relative;
@@ -119,7 +163,7 @@ main {
   box-shadow: 0 8px 16px rgba(66,39,8,.32);
 }
 .name-plaque span { font-family: Italianno, cursive; font-size: clamp(64px, 19vw, 92px); line-height: .85; }
-.intro { max-width: 390px; margin: 34px 10px 0; font-family: Cinzel, serif; font-size: 14px; line-height: 1.8; }
+.intro { max-width: 390px; margin: 28px 14px 0; padding: 18px 20px; font-family: Cinzel, serif; font-size: 14px; line-height: 1.8; background: rgba(255, 250, 235, .58); border: 1px solid rgba(176,139,49,.38); }
 .scroll-cue { margin-top: 24px; padding: 14px; z-index: 2; }
 .scroll-cue span { display: block; width: 14px; height: 14px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg); animation: bounce 1.7s infinite; }
 @keyframes bounce { 50% { transform: translateY(8px) rotate(45deg); } }
@@ -130,7 +174,7 @@ main {
 .countdown { display: grid; grid-template-columns: repeat(4, 1fr); width: min(100%, 420px); margin-top: -7px; padding: 19px 12px; color: white; background: linear-gradient(135deg, #c7a550, #8e6724); border: 3px double #f4df9d; border-radius: 18px; z-index: 2; }
 .countdown strong { display: block; font-family: Cinzel, serif; font-size: clamp(22px, 7vw, 34px); font-weight: 400; }
 .countdown small { text-transform: uppercase; font-size: 8px; letter-spacing: .08em; }
-.audio-section { min-height: 470px; background: linear-gradient(rgba(250,245,228,.95), rgba(250,245,228,.95)), url("assets/referencia.jpeg"); }
+.audio-section { min-height: 470px; background: rgba(250,245,228,.8); }
 .seal, .medallion { display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, #f7dda1, #9a6d28); border: 3px double #72501e; box-shadow: 0 4px 15px rgba(70,40,8,.25); }
 .seal { width: 80px; height: 80px; font-size: 34px; }
 h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold); line-height: .9; }
@@ -149,7 +193,7 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
 .address { max-width: 340px; line-height: 1.7; }
 .button { z-index: 2; display: inline-block; margin-top: 18px; padding: 15px 28px; color: white; background: var(--gold); border-radius: 999px; box-shadow: 0 7px 0 #795a21; transition: transform .2s, box-shadow .2s; }
 .button:hover { transform: translateY(2px); box-shadow: 0 5px 0 #795a21; }
-.dress-code { min-height: 760px; color: white; background: linear-gradient(rgba(131,102,36,.78), rgba(112,81,27,.9)), url("assets/referencia.jpeg"); background-size: auto, 768px auto; }
+.dress-code { min-height: 760px; color: white; background: linear-gradient(rgba(131,102,36,.8), rgba(112,81,27,.9)), url("assets/fondo-damasco.png"); background-size: auto, cover; }
 .dress-code::after { border-width: 2px; border-color: #f0dfad; }
 .medallion { position: absolute; top: 28px; width: 70px; height: 70px; font-size: 28px; }
 .dancing { width: 330px; max-width: 86vw; aspect-ratio: 1; background-size: 700px auto; background-position: -302px -364px; filter: drop-shadow(0 12px 9px rgba(34,19,3,.35)); }
@@ -173,7 +217,7 @@ h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold);
 
 @media (max-width: 370px) {
   .section { padding-inline: 20px; }
-  .portrait { background-size: 770px auto; background-position: -80px -128px; }
+  .hero { padding-inline: 8px; }
   .stained-glass { background-size: 550px auto; background-position: -34px -535px; }
 }
 @media (prefers-reduced-motion: reduce) {
