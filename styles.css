@@ -230,16 +230,57 @@ main {
   50% { transform: translate(-50%, -50%) scale(1.055); filter: drop-shadow(0 7px 13px rgba(125, 83, 20, .5)); }
 }
 .player-caption { z-index: 2; margin: -34px 0 5px; color: #876623; font: 600 11px Cinzel, serif; letter-spacing: .1em; text-transform: uppercase; }
-.scroll-cue { margin-top: 24px; padding: 14px; z-index: 2; }
-.scroll-cue span { display: block; width: 14px; height: 14px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg); animation: bounce 1.7s infinite; }
-@keyframes bounce { 50% { transform: translateY(8px) rotate(45deg); } }
-.story { min-height: 780px; }
+.countdown-art {
+  position: relative;
+  z-index: 2;
+  width: min(94vw, 470px);
+  aspect-ratio: 2 / 3;
+  margin-top: 38px;
+  filter: drop-shadow(0 14px 15px rgba(65, 37, 7, .28));
+}
+.countdown-art > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.countdown-panel {
+  position: absolute;
+  z-index: 2;
+  left: 8.5%;
+  right: 8.5%;
+  bottom: 8.7%;
+  height: 16.7%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  color: #4b2a14;
+  text-shadow: 0 1px 0 rgba(255, 240, 177, .78), 0 3px 4px rgba(65, 32, 5, .22);
+}
+.countdown-panel > div + div { border-left: 1px solid rgba(95, 53, 13, .32); }
+.countdown-panel strong {
+  display: block;
+  font-family: Cinzel, serif;
+  font-size: clamp(24px, 7vw, 36px);
+  font-weight: 600;
+  line-height: 1;
+}
+.countdown-panel small {
+  display: block;
+  margin-top: 9px;
+  font: 600 clamp(7px, 2vw, 10px) Montserrat, sans-serif;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.event-date {
+  position: relative;
+  z-index: 2;
+  width: min(88%, 390px);
+  margin: 14px 0 0;
+  padding: 18px 16px 20px;
+  color: #5c3519;
+  border-top: 1px solid rgba(176, 139, 49, .6);
+  border-bottom: 1px solid rgba(176, 139, 49, .6);
+  text-shadow: 0 1px 0 #fff8df;
+}
+.event-date span { display: block; margin-bottom: 4px; font: 38px Italianno, cursive; color: var(--wine); }
+.event-date strong { font: 600 clamp(15px, 4.5vw, 20px) Cinzel, serif; letter-spacing: .1em; }
 .script, h2 { font-family: Italianno, cursive; font-weight: 400; }
-.script { font-size: 48px; margin: 0 0 22px; color: var(--wine); }
-.stained-glass { width: 335px; max-width: 86vw; aspect-ratio: .8; background-size: 600px auto; background-position: -36px -582px; border-radius: 48% 48% 8px 8px; border: 4px solid #99732e; box-shadow: inset 0 0 25px #3c2615, 0 12px 24px rgba(80,45,8,.25); }
-.countdown { display: grid; grid-template-columns: repeat(4, 1fr); width: min(100%, 420px); margin-top: -7px; padding: 19px 12px; color: white; background: linear-gradient(135deg, #c7a550, #8e6724); border: 3px double #f4df9d; border-radius: 18px; z-index: 2; }
-.countdown strong { display: block; font-family: Cinzel, serif; font-size: clamp(22px, 7vw, 34px); font-weight: 400; }
-.countdown small { text-transform: uppercase; font-size: 8px; letter-spacing: .08em; }
 .seal, .medallion { display: grid; place-items: center; border-radius: 50%; background: radial-gradient(circle, #f7dda1, #9a6d28); border: 3px double #72501e; box-shadow: 0 4px 15px rgba(70,40,8,.25); }
 .seal { width: 80px; height: 80px; font-size: 34px; }
 h2 { margin: 18px 0 8px; font-size: clamp(49px, 14vw, 70px); color: var(--gold); line-height: .9; }
