@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#7e1f25">
+  <meta name="description" content="Invitación a los XV años de Aitana, inspirada en La Bella y la Bestia.">
+  <meta property="og:title" content="Mis XV años · Aitana">
+  <meta property="og:description" content="Acompáñame a celebrar una noche mágica.">
+  <meta property="og:image" content="assets/referencia.jpeg">
+  <title>Mis XV años · Aitana</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Italianno&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="petals" aria-hidden="true"></div>
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="ornament top-ornament" aria-hidden="true">❦</div>
+      <p class="eyebrow ribbon">MIS QUINCE AÑOS</p>
+      <div class="portrait-frame">
+        <div class="reference-crop portrait" role="img" aria-label="Quinceañera con vestido dorado"></div>
+      </div>
+      <div class="name-plaque">
+        <span>Aitana</span>
+      </div>
+      <p class="intro">Hay momentos en la vida que son especiales por sí solos, pero compartirlos con las personas que quiero los hace inolvidables.</p>
+      <a class="scroll-cue" href="#historia" aria-label="Continuar a la invitación"><span></span></a>
+    </section>
+
+    <section class="section story" id="historia">
+      <p class="script">Cada vez falta menos...</p>
+      <div class="reference-crop stained-glass" role="img" aria-label="Rosa encantada y pareja bailando"></div>
+      <div class="countdown" aria-label="Cuenta regresiva">
+        <div><strong id="days">000</strong><small>Días</small></div>
+        <div><strong id="hours">00</strong><small>Horas</small></div>
+        <div><strong id="minutes">00</strong><small>Minutos</small></div>
+        <div><strong id="seconds">00</strong><small>Segundos</small></div>
+      </div>
+    </section>
+
+    <section class="section audio-section">
+      <div class="seal">🌹</div>
+      <h2>Una noche encantada</h2>
+      <p>Presiona para acompañar la invitación con música.</p>
+      <button class="music-button" id="musicButton" type="button" aria-pressed="false">
+        <span class="music-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span id="musicLabel">Reproducir música</span>
+      </button>
+      <audio id="music" preload="none" loop>
+        <source src="assets/musica.mp3" type="audio/mpeg">
+      </audio>
+    </section>
+
+    <section class="section reception" id="recepcion">
+      <p class="eyebrow ribbon">MIS XV AÑOS</p>
+      <h2>Recepción</h2>
+      <div class="castle" aria-hidden="true">♜</div>
+      <p class="time">1:00 PM</p>
+      <h3>Salón El Paraíso</h3>
+      <p class="address">Una tarde para celebrar, bailar y crear recuerdos inolvidables.</p>
+      <a class="button" href="https://maps.google.com/?q=Salón+El+Paraíso" target="_blank" rel="noopener">Ver mapa</a>
+    </section>
+
+    <section class="section dress-code">
+      <div class="medallion">🌹</div>
+      <div class="reference-crop dancing" role="img" aria-label="Pareja bailando"></div>
+      <h2>Código de vestir</h2>
+      <p>Formal</p>
+      <p class="note">Se reservan los colores <strong>amarillo y dorado</strong> para la quinceañera.</p>
+      <div class="swatches" aria-label="Colores reservados"><span></span><span></span></div>
+    </section>
+
+    <section class="section gifts">
+      <div class="rose-cluster" aria-hidden="true">🌹 🌹 🌹</div>
+      <h2>Mesa de regalos</h2>
+      <p>El que tú seas mi invitado ya es mi mejor regalo.</p>
+      <p>Si deseas hacerme un obsequio, puedes darme un regalo en efectivo o un obsequio de tu preferencia.</p>
+      <div class="gift-icons" aria-hidden="true">🎁 &nbsp; ✉️</div>
+    </section>
+
+    <section class="section rsvp" id="confirmar">
+      <div class="seal">🌹</div>
+      <h2>Confirma tu asistencia</h2>
+      <p>Será un honor compartir este día contigo.</p>
+      <a class="button button-light" href="https://wa.me/?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%20XV%20años%20de%20Aitana" target="_blank" rel="noopener">Confirmar por WhatsApp</a>
+      <p class="closing">Te esperamos</p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
