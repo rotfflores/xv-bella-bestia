@@ -30,6 +30,9 @@ main {
   position: relative;
   width: min(100%, 420px);
   margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   box-shadow: 0 0 45px rgba(57,35,10,.35);
   overflow: hidden;
   background: transparent;
