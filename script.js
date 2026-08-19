@@ -26,25 +26,48 @@ setInterval(updateCountdown, 1000);
 
 const music = document.querySelector('#music');
 const musicButton = document.querySelector('#musicButton');
+const floatingMusicButton = document.querySelector('#floatingMusicButton');
 const musicLabel = document.querySelector('#musicLabel');
 music.volume = 0.48;
+let playerIsVisible = true;
+let musicHasStarted = false;
 
-musicButton.addEventListener('click', async () => {
+async function toggleMusic() {
   if (music.paused) {
     try {
       await music.play();
-      musicButton.classList.add('playing');
-      musicButton.setAttribute('aria-pressed', 'true');
-      musicButton.setAttribute('aria-label', 'Pausar música');
-      musicLabel.textContent = 'Reproduciendo · presiona para pausar';
     } catch {
       musicLabel.textContent = 'No se pudo reproducir';
     }
   } else {
     music.pause();
-    musicButton.classList.remove('playing');
-    musicButton.setAttribute('aria-pressed', 'false');
-    musicButton.setAttribute('aria-label', 'Reproducir música');
-    musicLabel.textContent = 'Presiona para reproducir';
   }
-});
+}
+
+function updateMusicControls() {
+  const isPlaying = !music.paused;
+  if (isPlaying) musicHasStarted = true;
+
+  musicButton.classList.toggle('playing', isPlaying);
+  musicButton.setAttribute('aria-pressed', String(isPlaying));
+  musicButton.setAttribute('aria-label', isPlaying ? 'Pausar música' : 'Reproducir música');
+  musicLabel.textContent = isPlaying ? 'Reproduciendo · presiona para pausar' : 'Presiona para reproducir';
+
+  floatingMusicButton.classList.toggle('playing', isPlaying);
+  floatingMusicButton.setAttribute('aria-pressed', String(isPlaying));
+  floatingMusicButton.setAttribute('aria-label', isPlaying ? 'Pausar música' : 'Reanudar música');
+  floatingMusicButton.hidden = playerIsVisible || !musicHasStarted;
+}
+
+musicButton.addEventListener('click', toggleMusic);
+floatingMusicButton.addEventListener('click', toggleMusic);
+music.addEventListener('play', updateMusicControls);
+music.addEventListener('pause', updateMusicControls);
+
+const playerObserver = new IntersectionObserver(([entry]) => {
+  playerIsVisible = entry.isIntersecting;
+  updateMusicControls();
+}, { threshold: 0.15 });
+
+playerObserver.observe(musicButton);
+updateMusicControls();

@@ -237,11 +237,54 @@ main {
 .player-button img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .player-button:hover { transform: translate(-50%, -50%) scale(1.04); }
 .player-button:focus-visible { outline: 3px solid var(--wine); outline-offset: 5px; }
-.player-button.playing { animation: player-pulse 1.8s ease-in-out infinite; }
-@keyframes player-pulse {
-  50% { transform: translate(-50%, -50%) scale(1.055); filter: drop-shadow(0 7px 13px rgba(125, 83, 20, .5)); }
+.player-button.playing { animation: player-float-spin 6s linear infinite; }
+@keyframes player-float-spin {
+  0% { transform: translate(-50%, -50%) translateY(0) rotate(0deg); }
+  50% { transform: translate(-50%, -50%) translateY(-10px) rotate(180deg); filter: drop-shadow(0 12px 14px rgba(125, 83, 20, .52)); }
+  100% { transform: translate(-50%, -50%) translateY(0) rotate(360deg); }
 }
 .player-caption { z-index: 2; margin: -34px 0 5px; color: #876623; font: 600 11px Cinzel, serif; letter-spacing: .1em; text-transform: uppercase; }
+.floating-music-button {
+  position: fixed;
+  z-index: 1000;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(18px, env(safe-area-inset-bottom));
+  width: 68px;
+  height: 68px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #fff9eb;
+  cursor: pointer;
+  filter: drop-shadow(0 7px 10px rgba(56, 25, 2, .42));
+  animation: floating-control 2.4s ease-in-out infinite;
+}
+.floating-music-button[hidden] { display: none; }
+.floating-music-button img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.floating-music-button.playing img { animation: floating-spin 6s linear infinite; }
+.floating-music-button span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17px;
+  height: 20px;
+  transform: translate(-50%, -50%);
+}
+.floating-music-button.playing span {
+  border-left: 5px solid #7e1f25;
+  border-right: 5px solid #7e1f25;
+}
+.floating-music-button:not(.playing) span {
+  width: 0;
+  height: 0;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+  border-left: 17px solid #7e1f25;
+  transform: translate(-40%, -50%);
+}
+.floating-music-button:focus-visible { outline: 3px solid #7e1f25; outline-offset: 4px; }
+@keyframes floating-spin { to { transform: rotate(360deg); } }
+@keyframes floating-control { 50% { translate: 0 -7px; } }
 .countdown-art {
   position: relative;
   z-index: 2;
